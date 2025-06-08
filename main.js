@@ -32,10 +32,14 @@ function showItemsList() {
                     <label for="item-${index}">${item.name}</label>
                 </div>
 
-                <button>
+                <button onclick="removeItem('${item.name}')">
                     <img src="./assets/trash-icon.svg" alt="lixo">
                 </button>
             </div>
         `
     }) 
+}
+
+function removeItem(itemName) {
+    const itemIndex = items.findIndex ((item) => item.name === itemName)
 }
